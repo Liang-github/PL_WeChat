@@ -52,6 +52,7 @@
 		76250B071EA75653008961AE /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76250B061EA75653008961AE /* DiscoverViewController.swift */; };
 		76250B091EA75668008961AE /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76250B081EA75668008961AE /* MeViewController.swift */; };
 		76250B0B1EA75690008961AE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76250B0A1EA75690008961AE /* TabBarController.swift */; };
+		765913E11EA8640200AB9C64 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765913E01EA8640200AB9C64 /* ChatMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		76250B061EA75653008961AE /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		76250B081EA75668008961AE /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		76250B0A1EA75690008961AE /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		765913E01EA8640200AB9C64 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				76250A8E1EA75193008961AE /* AppDelegate.swift */,
-				76250B021EA75633008961AE /* ChatViewController.swift */,
+				765913DF1EA863BF00AB9C64 /* 微信 */,
 				76250B041EA75642008961AE /* ContactsViewController.swift */,
 				76250B061EA75653008961AE /* DiscoverViewController.swift */,
 				76250B081EA75668008961AE /* MeViewController.swift */,
@@ -253,6 +255,15 @@
 				76250AFB1EA7556D008961AE /* Me.xcassets */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		765913DF1EA863BF00AB9C64 /* 微信 */ = {
+			isa = PBXGroup;
+			children = (
+				76250B021EA75633008961AE /* ChatViewController.swift */,
+				765913E01EA8640200AB9C64 /* ChatMessageCell.swift */,
+			);
+			name = "微信";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +438,7 @@
 				76250B051EA75642008961AE /* ContactsViewController.swift in Sources */,
 				76250B031EA75633008961AE /* ChatViewController.swift in Sources */,
 				76250B0B1EA75690008961AE /* TabBarController.swift in Sources */,
+				765913E11EA8640200AB9C64 /* ChatMessageCell.swift in Sources */,
 				76250A8F1EA75193008961AE /* AppDelegate.swift in Sources */,
 				76250B071EA75653008961AE /* DiscoverViewController.swift in Sources */,
 			);

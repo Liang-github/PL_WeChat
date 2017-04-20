@@ -56,4 +56,13 @@ class DiscoverViewController: UIViewController,UITableViewDataSource,UITableView
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                let qrcodeVC = QRCodeScanViewController()
+                navigationController?.pushViewController(qrcodeVC, animated: true)
+            }
+        }
+    }
 }

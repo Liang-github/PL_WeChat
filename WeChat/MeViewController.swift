@@ -63,7 +63,7 @@ class MeViewController: UIViewController,UITableViewDataSource,UITableViewDelega
             cell.contentView.addSubview(label)
             
             let accountLabel = UILabel.init(frame: CGRect(x: 100, y: 55, width: 200, height: 20))
-            accountLabel.text = "微信号：PL88886666"
+            accountLabel.text = "微信号：PL8888****"
             cell.contentView.addSubview(accountLabel)
         } else {
             let imageView = UIImageView.init(frame: CGRect(x: 10, y: 10, width: 24, height: 24))

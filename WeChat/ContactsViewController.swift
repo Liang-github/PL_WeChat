@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ContactsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,UISearchBarDelegate {
 
     let firstSectionData = [["plugins_FriendNotify","新的朋友"],["add_friend_icon_addgroup","群聊"],["Contact_icon_ContactTag","标签"],["add_friend_icon_offical","公众号"]]
     let array = ["安琪拉","李白","赵云","孙尚香","刘禅","程咬金","张飞","小乔","诸葛亮","露娜","项羽","关羽","刘备"];
@@ -46,6 +46,7 @@ class ContactsViewController: UIViewController,UITableViewDataSource,UITableView
             sectionHeadArr.add(headArr)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
@@ -53,9 +54,21 @@ class ContactsViewController: UIViewController,UITableViewDataSource,UITableView
         let tableView = UITableView.init(frame: UIScreen.main.bounds, style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableHeaderView = tableHeaderView()
         tableView.rowHeight = 50
         tableView.sectionIndexBackgroundColor = UIColor.clear
+        tableView.sectionIndexColor = UIColor.gray
         view.addSubview(tableView)
+    }
+    func tableHeaderView() -> UISearchBar {
+        
+        let bar = UISearchBar.init()
+        bar.sizeToFit()
+        bar.delegate = self
+        bar.placeholder = "搜索"
+        bar.showsBookmarkButton = true
+        bar.setImage(UIImage(named:"VoiceSearchStartBtn"), for: .bookmark, state: .normal)
+        return bar
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -92,6 +105,9 @@ class ContactsViewController: UIViewController,UITableViewDataSource,UITableView
         }
         
     }
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return set.allObjects as? [String]
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
     }
@@ -100,7 +116,7 @@ class ContactsViewController: UIViewController,UITableViewDataSource,UITableView
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "haha"
+            return nil
         } else {
             return set.allObjects[section - 1] as? String
         }

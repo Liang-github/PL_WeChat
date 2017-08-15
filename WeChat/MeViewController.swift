@@ -73,7 +73,6 @@ class MeViewController: UIViewController,UITableViewDataSource,UITableViewDelega
             let label = UILabel.init(frame: CGRect(x: 44, y: 12, width: 50, height: 20))
             label.text = arr[indexPath.section - 1][indexPath.row]
             cell.contentView.addSubview(label)
-            print("试一试")
         }
         return cell
     }
